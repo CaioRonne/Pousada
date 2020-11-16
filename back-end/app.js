@@ -7,11 +7,9 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 const db = require('./config/database')
-const dbusuario = process.env.USUARIO
-const dbchave = process.CHAVE
-const dbnome = process.env.NOME
 
-db(`mongodb+srv://${dbusuario}:${dbchave}@pousada.wmoqx.mongodb.net/${dbnome}?retryWrites=true&w=majority`)
+
+db(`mongodb+srv://ronne:tiburcius@pousada.wmoqx.mongodb.net/Pousada?retryWrites=true&w=majority`)
 
 var app = express();
 
