@@ -5,6 +5,30 @@ const esquema = mongoose.Schema({
         type: String,
         required: true
     },
+    cpf: {
+        type: String,
+        required: true,
+    },
+    rg: {
+        type: String,
+        required: true,
+    },
+    telefone: {
+        type: String,
+        required: true,
+    },
+    endereco: {
+        type: String,
+        required: true,
+    },
+    email: {
+        type: String,
+        required: true,
+    },
+    nascimento: {
+        type: String,
+        required: true,
+    },
     hospedes: {
         type: String,
         required: true

@@ -30,4 +30,7 @@ app.use('/reserva', reserva)
 const funcionario = require('./routes/funcionario')
 app.use('/funcionario', funcionario)
 
+const quarto = require('./routes/quarto')
+app.use('/quarto', quarto)
+
 module.exports = app;
