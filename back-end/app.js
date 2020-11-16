@@ -27,4 +27,7 @@ app.use('/users', usersRouter);
 const reserva = require('./routes/reserva')
 app.use('/reserva', reserva)
 
+const funcionario = require('./routes/funcionario')
+app.use('/funcionario', funcionario)
+
 module.exports = app;
