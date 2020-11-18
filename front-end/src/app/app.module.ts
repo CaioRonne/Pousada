@@ -10,6 +10,8 @@ import { MainFooterComponent } from './ui/main-footer/main-footer.component';
 import { MainMenuComponent } from './ui/main-menu/main-menu.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReservaListComponent } from './reserva/reserva-list/reserva-list.component';
+import { ReservaFormComponent } from './reserva/reserva-form/reserva-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,14 +19,16 @@ import { ReservaListComponent } from './reserva/reserva-list/reserva-list.compon
     MainToolbarComponent,
     MainFooterComponent,
     MainMenuComponent,
-    ReservaListComponent
+    ReservaListComponent,
+    ReservaFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

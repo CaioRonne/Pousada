@@ -2,3 +2,54 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+#content {
+    margin: 40px;
+}
+
+.mat-table {
+    width: 100%;
+}
+
+.cell-align-right {
+    text-align: right !important;
+}
+
+.cell-align-center {
+    text-align: center !important;
+}
+
+.mat-row .mat-raised-button {
+    visibility: hidden;
+}
+
+.mat-row:hover .mat-raised-button {
+    visibility: visible;
+}
+
+.mat-row:hover {
+    filter: brightness(92%);
+}
+
+.new-item {
+    background-color: transparent;
+    padding-left: 0 !important;
+    a {
+        font-size: 100%;
+    }
+}
+
+.std-form {
+   
+   max-width: 80%;
+   margin: 0 auto;
+   
+   mat-form-field {
+      min-width: 150px;
+      max-width: 500px;
+      width: 100%;
+      margin-right: 30px;
+   }
+   
+}

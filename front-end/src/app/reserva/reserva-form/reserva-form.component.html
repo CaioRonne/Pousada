@@ -1,0 +1,35 @@
+<h1>{{ title }}</h1>
+
+<form class="std-form">
+
+<mat-form-field>
+		<mat-label>Nome do cliente</mat-label>
+		<input matInput placeholder="Nome do cliente"
+      [(ngModel)]="reserva.cliente" name="cliente" required>
+  </mat-form-field>
+
+<mat-form-field>
+		<mat-label>Telefone do cliente</mat-label>
+		<input matInput placeholder="(16) 9 996600-14"
+      [(ngModel)]="reserva.telefone" name="telefone" required rows="3"> 
+  </mat-form-field>
+  
+ <mat-form-field>
+		<mat-label>Quantidade de hospedes</mat-label>
+		<input matInput placeholder="00"
+      [(ngModel)]="reserva.hospedes" name="hospedes" required>
+  </mat-form-field>
+
+ <mat-form-field>
+		<mat-label>Data do check-in</mat-label>
+		<input matInput placeholder="01/01/2000"
+      [(ngModel)]="reserva.datacheckin" name="datacheckin" required>
+  </mat-form-field>
+
+ <mat-form-field>
+		<mat-label>Data do check-out</mat-label>
+		<input matInput placeholder="02/01/2000"
+      [(ngModel)]="reserva.datacheckout" name="datacheckout" required>
+  </mat-form-field>
+
+</form>

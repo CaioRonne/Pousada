@@ -8,11 +8,16 @@ import { HttpClient } from '@angular/common/http';
 export class ReservaService {
 
 private apiServer = environment.apiServer
+  private apiUri : string = this.apiServer + 'reserva'
+
 
   constructor(private http: HttpClient) { }
 
  listar() {
-      return this.http.get(this.apiServer + 'reserva').toPromise()
+      return this.http.get(this.apiUri).toPromise()
  }
+
+ excluir(id: string) {
+return this.http.request('DELETE', this.apiUri, {body: {_id: id}}).toPromise() }
   
 }
