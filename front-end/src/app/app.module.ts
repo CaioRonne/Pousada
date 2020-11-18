@@ -9,13 +9,15 @@ import { MainToolbarComponent } from './ui/main-toolbar/main-toolbar.component';
 import { MainFooterComponent } from './ui/main-footer/main-footer.component';
 import { MainMenuComponent } from './ui/main-menu/main-menu.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReservaListComponent } from './reserva/reserva-list/reserva-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainToolbarComponent,
     MainFooterComponent,
-    MainMenuComponent
+    MainMenuComponent,
+    ReservaListComponent
   ],
   imports: [
     BrowserModule,

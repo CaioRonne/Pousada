@@ -12,7 +12,7 @@ private apiServer = environment.apiServer
   constructor(private http: HttpClient) { }
 
  listar() {
-      return this.http.get(this.apiServer + 'reserva')
+      return this.http.get(this.apiServer + 'reserva').toPromise()
  }
   
 }
