@@ -29,7 +29,7 @@ controller.obterUm = async (req, res) => {
     try {
 
         const id = req.params.id
-        let obj = await ProfeFuncionariossor.findById(id)
+        let obj = await Funcionario.findById(id)
         if(obj) res.send(obj)      
         else res.status(404).end() 
     }

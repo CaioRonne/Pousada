@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReservaListComponent } from './reserva/reserva-list/reserva-list.component';
 import { ReservaFormComponent } from './reserva/reserva-form/reserva-form.component';
 import { FormsModule } from '@angular/forms';
+import { ClienteListComponent } from './cliente/cliente-list/cliente-list.component';
+import { ClienteFormComponent } from './cliente/cliente-form/cliente-form.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FormsModule } from '@angular/forms';
     MainFooterComponent,
     MainMenuComponent,
     ReservaListComponent,
-    ReservaFormComponent
+    ReservaFormComponent,
+    ClienteListComponent,
+    ClienteFormComponent
   ],
   imports: [
     BrowserModule,

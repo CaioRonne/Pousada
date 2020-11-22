@@ -34,4 +34,7 @@ app.use('/funcionario', funcionario)
 const quarto = require('./routes/quarto')
 app.use('/quarto', quarto)
 
+const cliente = require('./routes/cliente')
+app.use('/cliente', cliente)
+
 module.exports = app;
