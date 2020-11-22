@@ -11,7 +11,7 @@ export class ReservaListComponent implements OnInit {
 
    reservas : any = []
 
-   displayedColumns: string[] = ['cliente', 'telefone', 'hospedes', 'datacheckin', 'datacheckout', 'observacao', 'editar', 'excluir']
+   displayedColumns: string[] = ['cliente', 'hospedes', 'datacheckin', 'datacheckout', 'funcionario', 'observacao', 'editar', 'excluir']
    
   constructor(
       private reservaSrv : ReservaService,

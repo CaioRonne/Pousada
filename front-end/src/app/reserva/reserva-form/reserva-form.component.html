@@ -1,17 +1,11 @@
 <h1>{{ title }}</h1>
 
-<form class="std-form">
+<form class="std-form" #f="ngForm" (ngSubmit)="salvar(f)">
 
 <mat-form-field>
 		<mat-label>Nome do cliente</mat-label>
 		<input matInput placeholder="Nome do cliente"
       [(ngModel)]="reserva.cliente" name="cliente" required>
-  </mat-form-field>
-
-<mat-form-field>
-		<mat-label>Telefone do cliente</mat-label>
-		<input matInput placeholder="(16) 9 996600-14"
-      [(ngModel)]="reserva.telefone" name="telefone" required rows="3"> 
   </mat-form-field>
   
  <mat-form-field>
@@ -31,5 +25,22 @@
 		<input matInput placeholder="02/01/2000"
       [(ngModel)]="reserva.datacheckout" name="datacheckout" required>
   </mat-form-field>
+
+<mat-form-field>
+		<mat-label>Funcionario responsavel pela reserva</mat-label>
+		<input matInput placeholder="Nome do funcionario"
+      [(ngModel)]="reserva.funcionario" name="funcionario" required rows="3"> 
+  </mat-form-field>
+
+  <mat-toolbar class="form-buttons">
+    <mat-toolbar-row>
+      <button mat-raised-button type="submit" color="accent">
+        Salvar
+      </button>
+      <button mat-raised-button type="button" (click)="voltar(f)">
+        Voltar
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
 
 </form>
