@@ -5,31 +5,43 @@
 <mat-form-field>
 		<mat-label>Nome do cliente</mat-label>
 		<input matInput placeholder="Nome do cliente"
-      [(ngModel)]="cliente.cliente" name="cliente" required>
+      [(ngModel)]="cliente.nome" name="cliente" required>
   </mat-form-field>
   
  <mat-form-field>
-		<mat-label>Quantidade de hospedes</mat-label>
-		<input matInput placeholder="00"
-      [(ngModel)]="cliente.hospedes" name="hospedes" required>
+		<mat-label>Cpf do cliente</mat-label>
+		<input matInput placeholder="000.000.000-00"
+      [(ngModel)]="cliente.cpf" name="cpf" required>
   </mat-form-field>
 
  <mat-form-field>
-		<mat-label>Data do check-in</mat-label>
+		<mat-label>Rg do cliente</mat-label>
 		<input matInput placeholder="01/01/2000"
-      [(ngModel)]="cliente.datacheckin" name="datacheckin" required>
+      [(ngModel)]="cliente.rg" name="00-000-000.0" required>
   </mat-form-field>
 
  <mat-form-field>
-		<mat-label>Data do check-out</mat-label>
-		<input matInput placeholder="02/01/2000"
-      [(ngModel)]="cliente.datacheckout" name="datacheckout" required>
+		<mat-label>Telefone do cliente</mat-label>
+		<input matInput placeholder="(00) 9 9999-0000"
+      [(ngModel)]="cliente.telefone" name="telefone" required>
   </mat-form-field>
 
 <mat-form-field>
-		<mat-label>Funcionario responsavel pela cliente</mat-label>
-		<input matInput placeholder="Nome do funcionario"
-      [(ngModel)]="cliente.funcionario" name="funcionario" required rows="3"> 
+		<mat-label>Endereco do cliente</mat-label>
+		<input matInput placeholder="rua dos maneiros 2989"
+      [(ngModel)]="cliente.endereco" name="endereco" required > 
+  </mat-form-field>
+
+<mat-form-field>
+		<mat-label>Email do cliente</mat-label>
+		<input matInput placeholder="email@Gmail.com"
+      [(ngModel)]="cliente.email" name="email" required > 
+  </mat-form-field>
+
+  <mat-form-field>
+		<mat-label>Nascimento do cliente</mat-label>
+		<input matInput placeholder="00/00/2000"
+      [(ngModel)]="cliente.nascimento" name="nascimento" required > 
   </mat-form-field>
 
   <mat-toolbar class="form-buttons">

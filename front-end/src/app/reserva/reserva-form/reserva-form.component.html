@@ -27,9 +27,12 @@
   </mat-form-field>
 
 <mat-form-field>
-		<mat-label>Funcionario responsavel pela reserva</mat-label>
-		<input matInput placeholder="Nome do funcionario"
-      [(ngModel)]="reserva.funcionario" name="funcionario" required rows="3"> 
+    <mat-label>Funcionario</mat-label>
+    <mat-select [(ngModel)]="reserva.funcionario" name="funcionario" required>
+      <mat-option *ngFor="let funcionario of funcionarios" [value]="funcionario._id">
+        {{ funcionario.nome }}
+      </mat-option>
+    </mat-select>
   </mat-form-field>
 
   <mat-toolbar class="form-buttons">

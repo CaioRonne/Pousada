@@ -4,6 +4,7 @@ import { NgForm } from '@angular/forms';
 import { ReservaService } from '../reserva.service';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { FuncionarioService } from 'src/app/funcionario/funcionario.service';
 
 @Component({
   selector: 'app-reserva-form',
@@ -13,11 +14,13 @@ import { ActivatedRoute } from '@angular/router';
 export class ReservaFormComponent implements OnInit {
 
 reserva : any = {}
+funcionarios : any = []
 
 title : string = 'Cadastrar reserva'
 
   constructor(
     private reservaSrv : ReservaService,
+    private funcionarioSrv : FuncionarioService,
     private snackBar : MatSnackBar,
     private location : Location,
     private actRoute : ActivatedRoute
@@ -34,6 +37,17 @@ title : string = 'Cadastrar reserva'
         this.snackBar.open('ERRO: não foi possível editar os dados!',
           'Ok.', { duration: 5000 })
       }
+    }
+  }
+
+async carregarDados() {
+    try {
+      this.funcionarios = await this.funcionarioSrv.listar()
+    }
+    catch(erro) {
+      console.log(erro)
+      this.snackBar.open(`ERRO: não foi possível carregar todos os dados 
+        necessários para a página.`, 'Que pena', { duration: 5000 })
     }
   }
 

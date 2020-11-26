@@ -18,7 +18,8 @@ const esquema = mongoose.Schema({
         required: true,
     },
     funcionario: {
-        type: String,
+        type: mongoose.ObjectId,
+        ref: 'Funcionario',
         required: true,
     },
     observacao: {

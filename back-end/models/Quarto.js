@@ -19,7 +19,7 @@ const esquema = mongoose.Schema({
     },
     reserva: {
         type: String,
-        required: true,
+        required: false,
     }
 })
 
