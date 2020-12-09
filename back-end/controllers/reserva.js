@@ -15,8 +15,7 @@ controller.novo = async (req, res) => {
 
 controller.listar = async (req, res) => {
     try {
-        let dados = await Reserva.find()
-        .populate('funcionario')
+        let dados = await Reserva.find().populate('funcionario', 'nome')
         res.send(dados) 
     }
     catch(erro) {

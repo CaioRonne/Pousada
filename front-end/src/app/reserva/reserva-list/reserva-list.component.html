@@ -29,7 +29,7 @@
 
  <ng-container matColumnDef="funcionario">
     <th mat-header-cell *matHeaderCellDef> Funcionario </th>
-    <td mat-cell *matCellDef="let reserva"> {{reserva.funcionario.nome}} </td>
+    <td mat-cell *matCellDef="let reserva"> {{reserva.funcionario?.nome}} </td>
   </ng-container>
   
   <ng-container matColumnDef="observacao">

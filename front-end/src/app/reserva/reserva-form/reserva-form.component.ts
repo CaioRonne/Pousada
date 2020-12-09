@@ -14,9 +14,10 @@ import { FuncionarioService } from 'src/app/funcionario/funcionario.service';
 export class ReservaFormComponent implements OnInit {
 
 reserva : any = {}
-funcionarios : any = []
 
 title : string = 'Cadastrar reserva'
+
+funcionarios : any = []
 
   constructor(
     private reservaSrv : ReservaService,
@@ -38,6 +39,7 @@ title : string = 'Cadastrar reserva'
           'Ok.', { duration: 5000 })
       }
     }
+    this.carregarDados()
   }
 
 async carregarDados() {
