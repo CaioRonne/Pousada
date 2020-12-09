@@ -14,6 +14,10 @@ import { ReservaFormComponent } from './reserva/reserva-form/reserva-form.compon
 import { FormsModule } from '@angular/forms';
 import { ClienteListComponent } from './cliente/cliente-list/cliente-list.component';
 import { ClienteFormComponent } from './cliente/cliente-form/cliente-form.component';
+import { FuncionarioListComponent } from './funcionario/funcionario-list/funcionario-list.component';
+import { FuncionarioFormComponent } from './funcionario/funcionario-form/funcionario-form.component';
+import { QuartoListComponent } from './quarto/quarto-list/quarto-list.component';
+import { QuartoFormComponent } from './quarto/quarto-form/quarto-form.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { ClienteFormComponent } from './cliente/cliente-form/cliente-form.compon
     ReservaListComponent,
     ReservaFormComponent,
     ClienteListComponent,
-    ClienteFormComponent
+    ClienteFormComponent,
+    FuncionarioListComponent,
+    FuncionarioFormComponent,
+    QuartoListComponent,
+    QuartoFormComponent
   ],
   imports: [
     BrowserModule,
