@@ -1,1 +1,47 @@
-<p>quarto-form works!</p>
+<h1>{{ title }}</h1>
+
+<form class="std-form" #f="ngForm" (ngSubmit)="salvar(f)">
+
+<mat-form-field>
+		<mat-label>Numero do quarto</mat-label>
+		<input matInput placeholder="Numero do quarto"
+      [(ngModel)]="quarto.numero" name="numero" required>
+  </mat-form-field>
+  
+ <mat-form-field>
+		<mat-label>Capacidade do quarto</mat-label>
+		<input matInput placeholder="04" 
+      [(ngModel)]="quarto.capacidade" name="capacidade" required>
+  </mat-form-field>
+
+<mat-form-field>
+		<mat-label>Camas de casal existentes no quarto</mat-label>
+		<input matInput placeholder="01"
+      [(ngModel)]="quarto.camacasal" name="camacasal" required>
+  </mat-form-field>
+
+ <mat-form-field>
+		<mat-label>Camas de solteiro existentes no quarto</mat-label>
+		<input matInput placeholder="01"
+      [(ngModel)]="quarto.camasolteiro" name="camasloteiro" required>
+  </mat-form-field>
+
+<mat-form-field>
+		<mat-label>Reserva associada ao quarto</mat-label>
+		<input matInput placeholder="id da reserva"
+      [(ngModel)]="quarto.reserva" name="reserva" > 
+  </mat-form-field>
+
+  <mat-toolbar class="form-buttons">
+    <mat-toolbar-row>
+      <button mat-raised-button type="submit" color="accent">
+        Salvar
+      </button>
+      <button mat-raised-button type="button" (click)="voltar(f)">
+        Voltar
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+</form>
+

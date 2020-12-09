@@ -11,7 +11,7 @@ export class FuncionarioListComponent implements OnInit {
 
    funcionarios : any = []
 
-   displayedColumns: string[] = ['funcionario', 'cargo', 'telefone']
+   displayedColumns: string[] = ['nome', 'cargo', 'telefone', 'editar', 'excluir']
    
   constructor(
       private funcionarioSrv : FuncionarioService,

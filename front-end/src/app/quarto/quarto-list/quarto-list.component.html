@@ -1,1 +1,41 @@
-<p>quarto-list works!</p>
+<h1>Quartos</h1>
+<mat-toolbar class="new-item">
+  <a mat-raised-button color="primary" [routerLink]="['/quarto/novo']">
+    <mat-icon>library_add</mat-icon>
+    Cadastrar quarto
+  </a>
+</mat-toolbar>
+<table mat-table [dataSource]="quartos" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="numero">
+    <th mat-header-cell *matHeaderCellDef> Número </th>
+    <td mat-cell *matCellDef="let quarto"> {{quarto.numero}} </td>
+  </ng-container>
+
+<ng-container matColumnDef="reserva">
+    <th mat-header-cell *matHeaderCellDef> Reserva </th>
+    <td mat-cell *matCellDef="let quarto"> {{quarto.reserva}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="editar">
+    <th mat-header-cell class="cell-align-center" *matHeaderCellDef>Editar</th> 
+    <td mat-cell class="cell-align-center" *matCellDef="let quarto">
+        <a mat-raised-button color="primary" title="Editar" 
+            [routerLink]="['/quarto', quarto._id]">
+            <mat-icon>edit</mat-icon>
+        </a>
+    </td>
+  </ng-container>
+
+<ng-container matColumnDef="excluir">
+    <th mat-header-cell class="cell-align-center" *matHeaderCellDef>Excluir</th> 
+    <td mat-cell class="cell-align-center" *matCellDef="let quarto">
+        <button mat-raised-button color="warn" title="Excluir" (click)="excluir(quarto._id)">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </td>
+  </ng-container> 
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
